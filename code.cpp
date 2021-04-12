@@ -18,11 +18,11 @@ int main(){
       }
     }
 
-    string s_array[number_of_spaces - 1];
+    string s_array[number_of_spaces - 1]; // separates the raw data by spaces and forms a list of the different sections.
     int i = 0;
     int last_space = 0;
-    while (i < number_of_spaces - 1){
-      for (int j = last_space; j < raw.length(); j++){
+    while (i < number_of_spaces - 2){
+      for (int j = last_space + 1; j < raw.length(); j++){
         if (raw[j] == ' '){
           s_array[i] = raw.substr(last_space, j);
           last_space = j;
@@ -31,6 +31,8 @@ int main(){
       }
       i++;
     }
-
-    cout << s_array[0] << endl;
+    for (int k = 0; k < number_of_spaces - 1; k++){
+      cout << s_array[k] << endl;
+    }
+    return 0;
 }
