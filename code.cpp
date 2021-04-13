@@ -31,8 +31,29 @@ int main(){
       }
       i++;
     }
-    for (int k = 0; k < number_of_spaces - 1; k++){
-      cout << s_array[k] << endl;
+
+    int i_array[number_of_spaces - 1]; //Takes the sting array and converts it to an integer array.
+    for (int k = 0; k < number_of_spaces-2; k++){
+      i_array[k] = stoi(s_array[k]);
     }
+
+    int a = 1; //sorts the array
+    while(a = 1){
+      a = 0;
+      for (i = 0; i < number_of_spaces - 1; i++){
+        int first_entry = i_array[i];
+        int second_entry = i_array[i+1];
+        if(first_entry > second_entry){
+          a = 1;
+          int swap = first_entry;
+          i_array[i] = second_entry;
+          i_array[i+1] = swap;
+        }
+      }
+    }
+    for (i = 0; i < number_of_spaces - 2; i++);{
+        cout << i_array[i] << endl;
+    }
+    cout << "test";
     return 0;
 }
