@@ -21,7 +21,7 @@ int main(){
     string s_array[number_of_spaces - 1]; // separates the raw data by spaces and forms a list of the different sections.
     int i = 0;
     int last_space = 0;
-    while (i < number_of_spaces - 2){
+    while (i < number_of_spaces - 1){
       for (int j = last_space + 1; j < raw.length(); j++){
         if (raw[j] == ' '){
           s_array[i] = raw.substr(last_space, j);
@@ -33,12 +33,12 @@ int main(){
     }
 
     int i_array[number_of_spaces - 1]; //Takes the sting array and converts it to an integer array.
-    for (int k = 0; k < number_of_spaces-2; k++){
+    for (int k = 0; k < number_of_spaces - 1; k++){
       i_array[k] = stoi(s_array[k]);
     }
 
     int a = 1; //sorts the array
-    while(a = 1){
+    while(a == 1){
       a = 0;
       for (i = 0; i < number_of_spaces - 1; i++){
         int first_entry = i_array[i];
@@ -51,9 +51,8 @@ int main(){
         }
       }
     }
-    for (i = 0; i < number_of_spaces - 2; i++);{
+    for (i = 0; i < number_of_spaces - 1; i++){
         cout << i_array[i] << endl;
     }
-    cout << "test";
     return 0;
 }
