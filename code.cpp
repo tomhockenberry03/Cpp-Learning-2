@@ -6,7 +6,7 @@ int main(){
 
     string raw; //gets input from the text file and writes it to a string of raw data
     ifstream file;
-    file.open("list10.txt");
+    file.open("list10k.txt");
     getline (file, raw);
     file.close();
 
