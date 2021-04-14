@@ -52,7 +52,7 @@ int main(){
       }
     }
     for (i = 0; i < number_of_spaces - 1; i++){
-        cout << i_array[i] << endl;
+        cout << i_array[i] << ' ';
     }
     return 0;
 }
