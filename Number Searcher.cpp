@@ -53,8 +53,29 @@ int main(){
         }
       }
     }
-    for (i = 0; i < length; i++){
-        cout << i_array[i] << ' ';
+
+    /*for (i = 0; i < length; i++) {
+      cout << i_array[i] << ' ';
+    }*/
+    cout << "What number would you like to find?";
+    int entry;
+    cin >> entry;
+
+    if (entry > i_array[length/2]) {
+      for (i = length/2; i < length; i++) {
+        if (i_array[i] == entry){
+          cout << i << endl;
+        }
+      }
     }
+    else {
+      for (i = 0; i < length/2; i++) {
+        if (i_array[i] == entry){
+          cout << i << endl;
+        }
+      }
+    }
+
+
     return 0;
 }
