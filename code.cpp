@@ -43,7 +43,7 @@ int main(){
       for (i = 0; i < number_of_spaces - 1; i++){
         int first_entry = i_array[i];
         int second_entry = i_array[i+1];
-        if(first_entry > second_entry){
+        if(first_entry < second_entry){
           a = 1;
           int swap = first_entry;
           i_array[i] = second_entry;
@@ -51,7 +51,7 @@ int main(){
         }
       }
     }
-    for (i = 0; i < number_of_spaces - 1; i++){
+    for (i = 0; i < number_of_spaces; i++){
         cout << i_array[i] << ' ';
     }
     return 0;
