@@ -57,9 +57,9 @@ int main(){
     /*for (i = 0; i < length; i++) {
       cout << i_array[i] << ' ';
     }*/
-    cout << "What number would you like to find?";
-    int entry;
-    cin >> entry;
+    //cout << "What number would you like to find?" << endl;
+    int entry = 2146710939;
+    //cin >> entry;
 
     if (entry > i_array[length/2]) {
       for (i = length/2; i < length; i++) {
