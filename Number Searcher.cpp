@@ -54,28 +54,35 @@ int main(){
       }
     }
 
-    /*for (i = 0; i < length; i++) {
+    /*for (i = 0; i < length; i++) { //prints whole sorted list
       cout << i_array[i] << ' ';
     }*/
-    //cout << "What number would you like to find?" << endl;
-    int entry = 2146710939;
-    //cin >> entry;
 
-    if (entry > i_array[length/2]) {
+
+    cout << "What number would you like to find?" << endl; //takes input from user on what to search for
+    int entry;
+    cin >> entry;
+
+    if (entry > i_array[length/2]) { //performs binary search
       for (i = length/2; i < length; i++) {
         if (i_array[i] == entry){
-          cout << i << endl;
+          cout << "The index of " << entry << " is " << i << endl;
         }
       }
     }
     else {
       for (i = 0; i < length/2; i++) {
         if (i_array[i] == entry){
-          cout << i << endl;
+          cout << "The index of " << entry << " is " << i << endl;
         }
       }
     }
 
+    /*for (i = 0; i < length/2; i++) { //performs regular search
+      if (i_array[i] == entry){
+        cout << "The index of " << entry << " is " << i << endl;
+      }
+    }*/
 
     return 0;
 }
