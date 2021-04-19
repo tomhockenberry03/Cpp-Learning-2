@@ -23,7 +23,7 @@ int main() {
     cout << "Career Prep - CA" << endl;
     cin >> weight;
 
-    if (weight == "AP"){
+    if (weight == "AP"){ // forms a list of the weightings for each course
       weights_list[i] = 5.0;
     }
     else if (weight == "HO"){
@@ -39,7 +39,7 @@ int main() {
 
     cout << "What grade was earned for credit " << i + 1 << "? (A, B, C, or D)" << endl;
     cin >> letter_grade;
-    if (letter_grade == 'A') {
+    if (letter_grade == 'A') { // forms a list of the necessary subtractions from each weight based on the grade
       grades[i] = 0;
     }
     else if (letter_grade == 'B') {
@@ -51,14 +51,15 @@ int main() {
     else if (letter_grade == 'D') {
       grades[i] = -3;
     }
+    cout << string (100, '\n');
   }
 
-  for (int i = 0; i < credits; i++){
+  for (int i = 0; i < credits; i++){ //forms a list of the true weighted credits including grades
     weighted_courses[i] = weights_list[i] + grades[i];
   }
 
-
-  for (int i = 0; i < credits; i++){
+  //averages the weighted credits
+    for (int i = 0; i < credits; i++){
     sum = sum + weighted_courses[i];
   }
   avg = sum/credits;
