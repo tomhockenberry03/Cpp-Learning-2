@@ -1,33 +1,49 @@
 #include <iostream>
 #include <fstream>
 #include <vector>
+#include <string>
+#include <cstdio>
 using namespace std;
 
 int main() {
-  /*
   string l;
   string g;
   int number_of_courses = 0;
   int entry = 0;
   ifstream file;
+  vector <string> levels; // defines 2 strings to store grade and level for each course
+  vector <string> grades;
+  vector <float> weights; // defines 2 more strings to store the weight and change in course weight due to grade
+  vector <float> subtractions;
+  vector <string> vecOfStrs;
+  string str;
+// Read the next line from File untill it reaches the end.
+while (getline(file, str))
+{
+    // Line contains string of length > 0 then save it in vector
+    if(str.size() > 0)
+        vecOfStrs.push_back(str);
+}
 
-
-  file.open("major.gpa.txt"); // reads the file to determnd the number of courses
+for (auto i = vecOfStrs.begin(); i != vecOfStrs.end(); ++i) {
+  cout << *i << " ";
+}
+/*  file.open("major.gpa.txt"); // reads the file to determnd the number of courses
   while (file >> l >> g){
     number_of_courses++;
   }
   file.close();
 
-  string levels[number_of_courses]; // defines 2 strings to store grade and level for each course
-  string grades[number_of_courses];
-  float weights[number_of_courses]; // defines 2 more strings to store the weight and change in course weight due to grade
-  float subtractions[number_of_courses];
+  vector <string> levels(); // defines 2 strings to store grade and level for each course
+  vector <string> grades();
+  vector <float> weights(); // defines 2 more strings to store the weight and change in course weight due to grade
+  vector <float> subtractions();
 
   file.open("major.gpa.txt"); // reopens the file, and adds entry to the two strings from inside the file
   while (file >> levels[entry] >> grades[entry]){
     entry ++;
   }
-  file.close();
+  file.close();*/
 
 
   for (int i = 0; i < number_of_courses; i++) { //assigning values to weights depending on the level of the course
@@ -43,6 +59,10 @@ int main() {
     }
     else if (a == "CP"){
       weights[i] = 4.0;
+    }
+    else {
+      printf("a = '%s'\n", a);
+      printf("a = '%d' '%d' '%d'\n", a[0], a[1], a[2]);
     }
   }
   for (int i = 0; i < number_of_courses; i++) { //determining how much is subtracted from each weight based on the grade
@@ -65,9 +85,9 @@ int main() {
   }
 
 }
-*/
 
-int main() {
+
+/*int main() {
 
   int credits; //determines the number of credits and defines the strings
   cout << "How many credits?" << endl;
@@ -131,3 +151,4 @@ int main() {
   cout << avg;
   return 0;
 }
+*/
